@@ -33,6 +33,7 @@ public class TimerScript : MonoBehaviour
         }
         if (isTimerRunning && endPlatform.PlayerInsideZone())
         {
+            GetComponent<AudioSource>().Play();
             StopTimer();
         }
         if (!isTimerSet && startPlatform.PlayerInsideZone())
